@@ -6,21 +6,28 @@ namespace Mission06_Mitton.Models
     {
         [Key]
         [Required]
-        public int MovieId { get; set; } // Primary Key
-
-        // --- NEED SPREADSHEET COLUMNS HERE ---
-        // (e.g., Title, Year, Director, Category? I will need these from you!)
-        // [Required]
-        // public string Title { get; set; }
+        public int MovieId { get; set; }
 
         [Required]
-        public string Rating { get; set; } // Will be handled via a dropdown in the view
+        public string Category { get; set; }
 
-        public bool Edited { get; set; } // Yes/No boolean
+        [Required]
+        public string Title { get; set; }
 
-        public string? LentTo { get; set; } // Nullable because it is not required
+        [Required]
+        public int Year { get; set; }
+
+        [Required]
+        public string Director { get; set; }
+
+        [Required]
+        public string Rating { get; set; }
+
+        public bool Edited { get; set; }
+
+        public string? LentTo { get; set; }
 
         [MaxLength(25, ErrorMessage = "Notes must be limited to 25 characters.")]
-        public string? Notes { get; set; } // Nullable because it is not required
+        public string? Notes { get; set; }
     }
 }
